@@ -6,6 +6,24 @@
   box-sizing: border-box;
 }
 
+/* Heading */
+h1 {
+  font-size: clamp(2.5rem, calc(2.15rem + 1.74vw), 3.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, calc(1.65rem + 1.74vw), 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, calc(1.15rem + 1.74vw), 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1.13rem, calc(0.99rem + 0.65vw), 1.5rem);
+}
+/* Heading */
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #00040f;
@@ -13,7 +31,6 @@ body {
 
 header {
   z-index: 999;
-  position: fixed;
   height: 100px;
   display: flex;
   align-items: center;
@@ -128,6 +145,133 @@ nav ul > li > a:hover {
 
 /* Hero Section */
 
+section.hero-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-block: 100px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  grid-template-areas: "Col01 Col02";
+  width: 100%;
+  height: 100%;
+}
+
+.col01 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: center;
+}
+
+.discountTag {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.child {
+  position: absolute;
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+  padding-inline: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discountTag .child > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(0.63rem, calc(0.49rem + 0.65vw), 1rem);
+}
+
+.discountTag .child > p > span.discountSpan {
+  color: white;
+}
+
+.hero--title {
+  display: flex;
+}
+
+.hero--title > h1 {
+  color: white;
+}
+
+.hero--title .button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(/assets/Images/ellipseStroke.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.hero--title h1 > span.titleSpan {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-details > p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.81rem, calc(0.7rem + 0.54vw), 1.13rem);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.images {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.images > img {
+  width: 100%;
+  height: auto;
+}
+
+.images > .flare {
+  position: relative;
+}
+
+.images .flare::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/Images/flare.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.hero-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(/assets/Images/RobotHand.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  background-position-x: right;
+  background-position-y: bottom;
+}
 
 /* -------------------------------------------- -------------------------------------------- */
 /* -------------------------------------------- -------------------------------------------- */
