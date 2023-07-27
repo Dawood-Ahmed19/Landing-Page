@@ -354,8 +354,10 @@ section.get--started {
   background-repeat: no-repeat;
   background-size: contain;
   background-position-y: top;
+  background-position-x: left -50px;
   width: 100%;
-  height: 250%;
+  height: 200%;
+  opacity: 60%;
 }
 
 .getstart-content {
@@ -396,10 +398,12 @@ button.btn {
   padding: 1.3em 3em;
   font-weight: 600;
   border: 1px solid transparent;
+  transition: 300ms ease;
 }
 
 button.btn:hover {
   border: 1px solid #33bbcf;
+  background: none;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -475,6 +479,7 @@ button.btn:hover {
 .billing-detail > p {
   font-size: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
   color: rgba(255, 255, 255, 0.6);
+  line-height: 2;
 }
 
 .billing-buttons {
@@ -483,6 +488,55 @@ button.btn:hover {
   gap: 50px;
 }
 
+.col-One > img {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+
+/* 4th Section */
+
+.paymentMethod {
+  width: 100%;
+  height: 100%;
+  padding-block: 100px;
+}
+
+.method-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.columnOne {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.method-title > h1 {
+  color: white;
+  font-weight: 600;
+}
+
+.method-detail > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
+  line-height: 2;
+}
+
+.columnTwo > img {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
 /* -------------------------------------------- -------------------------------------------- */
 /* -------------------------------------------- -------------------------------------------- */
 /* -------------------------------------------- -------------------------------------------- */
@@ -579,7 +633,8 @@ button.btn:hover {
 }
 
 @media (max-width: 1100px) {
-  .billing-content {
+  .billing-content,
+  .method-content {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
