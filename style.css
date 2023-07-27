@@ -27,6 +27,7 @@ h4 {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #00040f;
+  overflow-x: hidden;
 }
 
 header {
@@ -235,7 +236,11 @@ section.hero-section {
   height: auto;
 }
 
-.hero-section::after {
+.hero-container {
+  position: relative;
+}
+
+.hero-container::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -244,7 +249,7 @@ section.hero-section {
   background-size: contain;
   position: absolute;
   background-position-x: right -150px;
-  background-position-y: bottom -100px;
+  background-position-y: bottom -80px;
 }
 
 .button > img {
@@ -281,7 +286,7 @@ section.hero-section {
 section.count-down {
   width: 100%;
   height: 100%;
-  padding-block: 50px;
+  padding-block: 100px;
 }
 
 .count-content {
@@ -312,7 +317,7 @@ p > span.user-span {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-size: 20px;
+  font-size: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
 }
 
 p.break {
@@ -326,12 +331,158 @@ p.counts {
   font-size: 40px;
 }
 
-section.check {
-  height: 100vh;
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+
+/* 3rd Section */
+
+section.get--started {
   width: 100%;
+  height: 100%;
+  padding-block: 100px;
+  position: relative;
+}
+
+.get--started::after {
+  content: "";
+  position: absolute;
+  background: url(/assets/Images/flare2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: top;
+  width: 100%;
+  height: 250%;
+}
+
+.getstart-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-title > h1 {
+  color: white;
+  font-weight: 600;
+}
+
+.details > p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
+  line-height: 2;
+}
+
+button.btn {
+  cursor: pointer;
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1.3em 3em;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+button.btn:hover {
+  border: 1px solid #33bbcf;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rewards {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 20px;
+  padding: 10px 40px;
+  transition: 1s ease;
+}
+
+.rewards:hover {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  cursor: pointer;
+}
+
+.rewards-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text-title > h4 {
+  color: white;
+}
+
+.text-detail > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(0.75rem, calc(0.66rem + 0.43vw), 1rem);
 }
 
 /* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+/* -------------------------------------------- -------------------------------------------- */
+
+/* 3rd Section */
+
+.billingSection {
+  width: 100%;
+  height: 100%;
+  padding-block: 100px;
+}
+
+.billing-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-Two {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.billing-title > h1 {
+  color: white;
+  font-weight: 600;
+}
+
+.billing-detail > p {
+  font-size: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.billing-buttons {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 /* -------------------------------------------- -------------------------------------------- */
 /* -------------------------------------------- -------------------------------------------- */
 /* -------------------------------------------- -------------------------------------------- */
@@ -369,7 +520,7 @@ section.check {
 @media (max-width: 1324px) {
   .hero-content {
     grid-template: repeat(2, 1fr) / 1fr;
-    place-items: center;
+    justify-items: center;
   }
 }
 
@@ -377,13 +528,60 @@ section.check {
   section.hero-section {
     padding-block: 50px;
   }
-  .hero-section::after {
-    background-position-x: left;
-    background-position-y: bottom 50px;
-  }
 
   .images::before {
     background-position-x: left;
     background-position-y: top;
+  }
+}
+
+@media (max-width: 500px) {
+  .images::before {
+    background-position-x: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .images::before {
+    background-position-y: top 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-container::before {
+    background-position-y: bottom;
+    background-position-x: left;
+  }
+}
+
+@media (max-width: 1220px) {
+  .getstart-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1048px) {
+  section.count-down {
+    margin-top: 50px;
+  }
+
+  .count-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .break {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .billing-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
   }
 }

@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Landing Page</title>
   </head>
@@ -42,7 +46,7 @@
     <!-- {SectionOne}  -->
 
     <section class="hero-section">
-      <div class="container">
+      <div class="container hero-container">
         <div class="hero-content">
           <div class="col01">
             <div class="discountTag">
@@ -89,19 +93,19 @@
     <section id="count-down" class="count-down">
       <div class="container">
         <div class="count-content">
-          <div class="card">
+          <div data-aos="fade-up" class="card">
             <p class="counts">
               <span max-data="3800" class="counter">1</span>+
             </p>
             <p><span class="user-span">User Active</span></p>
           </div>
           <p class="break">|</p>
-          <div class="card">
+          <div data-aos="fade-up" data-aos-delay="200" class="card">
             <p class="counts"><span max-data="230" class="counter">1</span>+</p>
             <p><span class="user-span">Trusted By Company</span></p>
           </div>
           <p class="break">|</p>
-          <div class="card">
+          <div data-aos="fade-up" data-aos-delay="300" class="card">
             <p class="counts">
               <span max-data="230" class="counter">1</span>M+
             </p>
@@ -113,10 +117,129 @@
 
     <!-- section Three -->
 
-    <section class="check"></section>
+    <section class="get--started">
+      <div class="container">
+        <div class="getstart-content">
+          <div class="col-1">
+            <div data-aos="fade-up" data-aos-delay="200" class="section-title">
+              <h1>
+                You do the business, <br />
+                we'll handle the money.
+              </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="details">
+              <p>
+                With the right credit card, you can improve your financial life
+                <br />
+                by building credit, earning rewards and saving money. But <br />
+                with hundreds of credit cards on the market.
+              </p>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              class="getStartedButton"
+            >
+              <button class="btn">Get Started</button>
+            </div>
+          </div>
+          <div class="col-2">
+            <div data-aos="fade-left" data-aos-delay="500" class="rewards">
+              <div class="img">
+                <img src="/assets/Images/Icon1.png" alt="icon" />
+              </div>
+              <div class="rewards-text">
+                <div class="text-title">
+                  <h4>Rewards</h4>
+                </div>
+                <div class="text-detail">
+                  <p>
+                    The best credit cards offer some tantalizing <br />
+                    combinations of promotions and prizes
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="600" class="rewards">
+              <div class="img">
+                <img src="/assets/Images/Icon2.png" alt="icon" />
+              </div>
+              <div class="rewards-text">
+                <div class="text-title">
+                  <h4>100% Secured</h4>
+                </div>
+                <div class="text-detail">
+                  <p>
+                    We take proactive steps make sure your <br />
+                    information and transactions are secure.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="700" class="rewards">
+              <div class="img">
+                <img src="/assets/Images/Icon3.png" alt="icon" />
+              </div>
+              <div class="rewards-text">
+                <div class="text-title">
+                  <h4>Balance Transfer</h4>
+                </div>
+                <div class="text-detail">
+                  <p>
+                    A balance transfer credit card can save <br />
+                    you a lot of money in interest charges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Three -->
+
+    <section class="billingSection">
+      <div class="container">
+        <div class="billing-content">
+          <div data-aos="fade-down" data-aos-delay="300" class="col-One">
+            <img src="/assets/Images/Image.png" alt="image" />
+          </div>
+          <div class="col-Two">
+            <div data-aos="fade-up" data-aos-delay="400" class="billing-title">
+              <h1>
+                Easily Control your <br />
+                billing & invoicing
+              </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500" class="billing-detail">
+              <p>
+                Elit enim sed massa etiam. Mauris eu adipiscing <br />
+                ultrices ametodio aenean neque. Fusce ipsum orci <br />
+                rhoncus aliporttitor integer platea placerat.
+              </p>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              class="billing-buttons"
+            >
+              <img src="/assets/Images/AppleStore.png" alt="appleButton" />
+              <img src="/assets/Images/GooglePlay.png" alt="GoogleButton" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Four -->
 
     <!-- Scripts -->
     <script type="module" src="main.js"></script>
     <script src="counter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
